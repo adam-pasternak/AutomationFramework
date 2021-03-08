@@ -9,7 +9,7 @@ public class WebDriverProvider {
 
     static WebDriver driver;
 
-    public static WebDriver createWebDriver(String browser){
+    public static WebDriver createWebDriver(String browser) throws Exception {
 
         try {
 
@@ -29,7 +29,8 @@ public class WebDriverProvider {
             driver.manage().window().maximize();
 
         } catch (Exception e){
-            // TODO: logging exception
+            Log.logError("Browser information was not provided. Test won't be executed.");
+            throw new Exception(e);
         }
 
         return driver;
