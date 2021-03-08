@@ -1,11 +1,12 @@
 package steps;
 
 import io.cucumber.java.en.Given;
+import utils.PageObject;
 import utils.WebDriverProvider;
 
 import static utils.Tools.getProperty;
 
-public class BrowserSteps {
+public class BrowserSteps extends PageObject {
 
     @Given("^Open URL: ([^ ]+)$")
     public void openURL(String URL) throws Throwable {

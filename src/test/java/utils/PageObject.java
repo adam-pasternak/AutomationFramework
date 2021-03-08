@@ -8,10 +8,17 @@ import java.util.Map;
 
 public class PageObject {
 
-    static Map<String, By> pageObjects  = new HashMap<>();
+    /**
+     *  fullPageObjectsMap contains PAGE_NAME, PAGE_OBJECT, LOCATOR
+     *  pageObjectsMap contains PAGE_OBJECT, LOCATOR
+     */
+    static Map<String, Map<String, By>> fullPageObjectsMap = new HashMap<>();
+    static HashMap<String, By> pageObjectsMap = new HashMap<>();
 
-    public void addPageObject(String pageObjectName, By locator) {
-        pageObjects.put(pageObjectName, locator);
+    public void addPageObject(String pageName, String pageObjectName, By locator) {
+
+        pageObjectsMap.put(pageObjectName, locator);
+        fullPageObjectsMap.put(pageName, pageObjectsMap);
     }
 
     public static void initializePageObjects(){
@@ -19,9 +26,8 @@ public class PageObject {
         Log.logInfo("Page objects initialized");
     }
 
-    public static void getPageObject(String pageObjectName){
-        pageObjects.get(pageObjectName);
+    public static By getPageObjectLocator(String pageName, String pageObjectName){
+        return fullPageObjectsMap.get(pageName).get(pageObjectName);
     }
-
 }
 

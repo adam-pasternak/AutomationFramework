@@ -4,7 +4,6 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
-import static utils.PageObject.getPageObject;
 import static utils.PageObject.initializePageObjects;
 import static utils.Tools.getProperty;
 import static utils.WebDriverProvider.createWebDriver;
