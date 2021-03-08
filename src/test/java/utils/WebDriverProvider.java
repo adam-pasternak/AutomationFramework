@@ -13,16 +13,16 @@ public class WebDriverProvider {
 
         try {
 
-            if (browser.equals("chrome")) {
+            if (browser.equals("CHROME")) {
                 System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\chromedriver.exe");
                 driver = new ChromeDriver();
 
-            } else if (browser.equals("firefox")) {
-                System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\firefox.exe");
+            } else if (browser.equals("FIREFOX")) {
+                System.setProperty("webdriver.gecko.driver", "src\\test\\resources\\drivers\\geckodriver.exe");
                 driver = new FirefoxDriver();
 
-            } else if (browser.equals("edge")) {
-                System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\firefox.exe");
+            } else if (browser.equals("EDGE")) {
+                System.setProperty("webdriver.edge.driver", "src\\test\\resources\\drivers\\msedgedriver.exe");
                 driver = new EdgeDriver();
             }
 
