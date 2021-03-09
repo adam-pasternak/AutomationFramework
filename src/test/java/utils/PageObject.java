@@ -1,6 +1,7 @@
 package utils;
 
 import org.openqa.selenium.By;
+import pages.LoggedUserPanel;
 import pages.LoginPage;
 
 import java.util.HashMap;
@@ -23,6 +24,7 @@ public class PageObject {
 
     public static void initializePageObjects(){
         new LoginPage();
+        new LoggedUserPanel();
         Log.logInfo("Page objects initialized");
     }
 

@@ -6,7 +6,9 @@ import utils.PageObject;
 public class LoginPage extends PageObject{
 
     public LoginPage() {
-        addPageObject("LOGIN PAGE","USERNAME", By.id("user-name"));
-        addPageObject("LOGIN PAGE","PASSWORD", By.id("password"));
+        final String pageName = "Login page";
+        addPageObject(pageName,"USERNAME", By.id("user-name"));
+        addPageObject(pageName,"PASSWORD", By.id("password"));
+        addPageObject(pageName,"SUBMIT",   By.id("login-button"));
     }
 }

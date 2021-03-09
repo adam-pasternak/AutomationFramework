@@ -5,9 +5,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.util.concurrent.TimeUnit;
+
 public class WebDriverProvider {
 
     static WebDriver driver;
+    final static long IMPLICIT_WAIT = 10;
 
     public static WebDriver createWebDriver(String browser) throws Exception {
 
@@ -27,6 +30,7 @@ public class WebDriverProvider {
             }
 
             driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(IMPLICIT_WAIT, TimeUnit.SECONDS);
 
         } catch (Exception e){
             Log.logError("Browser information was not provided. Test won't be executed.");

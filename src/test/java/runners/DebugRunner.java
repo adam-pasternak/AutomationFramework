@@ -10,7 +10,5 @@ import org.junit.runner.RunWith;
             glue = {"utils", "steps"},
             tags = "@Debug"
     )
-    public class DebugRunner {
-        public class DebugTestRunner {}
-    }
+    public class DebugRunner {}
 
