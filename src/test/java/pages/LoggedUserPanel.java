@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import utils.PageObject;
 
-public class LoggedUserPanel extends PageObject{
+public class LoggedUserPanel extends PageObject {
 
     public LoggedUserPanel() {
         final String pageName = "Logged user panel";
