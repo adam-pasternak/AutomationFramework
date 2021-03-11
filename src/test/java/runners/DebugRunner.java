@@ -8,7 +8,10 @@ import org.junit.runner.RunWith;
     @CucumberOptions(
             features = "src/test/features",
             glue = {"utils", "steps"},
-            tags = "@Debug"
+            tags = "@Debug",
+            plugin = {"html:target/cukes", "json:target/cucumber-esphere-report.json",
+                    "junit:target/cucumber-esphere-report.xml",
+                    "pretty"}
     )
     public class DebugRunner {}
 

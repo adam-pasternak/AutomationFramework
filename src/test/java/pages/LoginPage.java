@@ -9,6 +9,7 @@ public class LoginPage extends PageObject {
         final String pageName = "Login page";
         addPageObject(pageName,"USERNAME", By.id("user-name"));
         addPageObject(pageName,"PASSWORD", By.id("password"));
-        addPageObject(pageName,"SUBMIT",   By.id("login-button"));
+        addPageObject(pageName,"SUBMIT", By.id("login-button"));
+        addPageObject(pageName,"ERROR_MESSAGE", By.xpath("//h3[@data-test='error']"));
     }
 }

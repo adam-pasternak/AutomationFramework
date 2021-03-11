@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class WebDriverProvider {
 
     static WebDriver driver;
-    final static long IMPLICIT_WAIT = 10;
+    final static long IMPLICIT_WAIT = 3;
 
     public static WebDriver createWebDriver(String browser) throws Exception {
 

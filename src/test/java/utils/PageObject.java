@@ -20,8 +20,7 @@ public class PageObject {
     public static void initializePageClasses() {
         try {
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-            URL packageUrl = classLoader.getResource(pagesLocation.replace(".", "/"));
-            File packageDir = new File(packageUrl.toURI());
+            File packageDir = new File(classLoader.getResource(pagesLocation).toURI());
 
             for (String pageClassName : packageDir.list()) {
                 String className = String.format("%s.%s", pagesLocation, pageClassName.replace(".class", ""));
@@ -29,10 +28,10 @@ public class PageObject {
             }
 
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | URISyntaxException e) {
-            Log.logError("Encountered problem with page objects initialization");
+            Log.logError("Encountered problem with page classes initialization");
             e.printStackTrace();
         }
-        Log.logInfo("Page objects initialized");
+        Log.logInfo("Page classes initialized");
     }
 
     public void addPageObject(String pageName, String pageObjectName, By locator) {
