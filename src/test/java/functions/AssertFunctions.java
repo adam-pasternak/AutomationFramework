@@ -1,7 +1,11 @@
 package functions;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import utils.TestData;
 import utils.WebDriverProvider;
+
+import java.util.List;
 
 import static utils.PageObject.getPageObjectLocator;
 
@@ -31,5 +35,13 @@ public class AssertFunctions {
             Assert.assertNotEquals("Field " + fieldName + " equals value " + expectedValue + ", but it shouldn't.", expectedValue, actualValue);
     }
 
-
+    public static void productExistsInCartFunction(String pageName, String productName, String fieldName) {
+        productName = (TestData.containsKey(productName) ? TestData.get(productName) : productName);
+        boolean isProductInCart = false;
+        List<WebElement> productsInCart = WebDriverProvider.getWebDriver().findElements(getPageObjectLocator(pageName, fieldName));
+        for (WebElement product : productsInCart){
+            if (product.getText().equals(productName)) isProductInCart = true;
+        }
+        Assert.assertTrue("Product " + productName + " doesn't exist in cart", isProductInCart);
+    }
 }

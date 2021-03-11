@@ -20,4 +20,9 @@ public class AssertSteps {
     public void checkFieldEqualsText(String pageName, String fieldName, String condition, String value) {
         checkFieldEqualsTextFunction(pageName, fieldName, condition, value);
     }
+
+    @Given("^(.+): product ([^ ]+) exists in ([^ ]+)")
+    public void productExistsInCart(String pageName, String productName, String fieldName) {
+        productExistsInCartFunction(pageName, productName, fieldName);
+    }
 }

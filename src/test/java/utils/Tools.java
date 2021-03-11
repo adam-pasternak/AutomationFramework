@@ -1,9 +1,13 @@
 package utils;
 
+import org.openqa.selenium.WebElement;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.List;
 import java.util.Properties;
+import java.util.Random;
 
 public class Tools {
 
@@ -22,6 +26,12 @@ public class Tools {
             fis.close();
         }
         return prop.getProperty(propertyName);
+    }
+
+    public static WebElement getRandomElement(List<WebElement> elements) {
+        Random random = new Random();
+        int element = random.nextInt(elements.size());
+        return elements.get(element);
     }
 
 }
