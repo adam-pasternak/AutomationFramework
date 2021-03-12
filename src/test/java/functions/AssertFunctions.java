@@ -35,13 +35,16 @@ public class AssertFunctions {
             Assert.assertNotEquals("Field " + fieldName + " equals value " + expectedValue + ", but it shouldn't.", expectedValue, actualValue);
     }
 
-    public static void productExistsInCartFunction(String pageName, String productName, String fieldName) {
+    public static void productExistsInCartFunction(String pageName, String productName, String condition, String fieldName) {
         productName = (TestData.containsKey(productName) ? TestData.get(productName) : productName);
         boolean isProductInCart = false;
         List<WebElement> productsInCart = WebDriverProvider.getWebDriver().findElements(getPageObjectLocator(pageName, fieldName));
         for (WebElement product : productsInCart){
             if (product.getText().equals(productName)) isProductInCart = true;
         }
-        Assert.assertTrue("Product " + productName + " doesn't exist in cart", isProductInCart);
+        if (condition.equals("exists"))
+            Assert.assertTrue("Product " + productName + " doesn't exists in cart", isProductInCart);
+        else if (condition.equals("does not exists"))
+            Assert.assertFalse("Product " + productName + " exists in cart but it shouldn't", isProductInCart);
     }
 }

@@ -21,8 +21,8 @@ public class AssertSteps {
         checkFieldEqualsTextFunction(pageName, fieldName, condition, value);
     }
 
-    @Given("^(.+): product ([^ ]+) exists in ([^ ]+)")
-    public void productExistsInCart(String pageName, String productName, String fieldName) {
-        productExistsInCartFunction(pageName, productName, fieldName);
+    @Given("^(.+): product ([^ ]+) (exists|does not exists) in ([^ ]+)")
+    public void productExistsInCart(String pageName, String productName, String condition, String fieldName) {
+        productExistsInCartFunction(pageName, productName, condition, fieldName);
     }
 }
