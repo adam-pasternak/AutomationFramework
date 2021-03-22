@@ -10,8 +10,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>selenium</module>
-        <module>karate</module>
+        <module>Selenium</module>
+        <module>Karate</module>
     </modules>
 
     <build>
