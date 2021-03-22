@@ -13,5 +13,5 @@ import org.junit.runner.RunWith;
                 "junit:target/cucumber-esphere-report.xml",
                 "pretty"}
 )
-public class RegressionRunner {}
+public class RegressionSeleniumRunner {}
 
