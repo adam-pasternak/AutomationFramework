@@ -2,9 +2,14 @@ package utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class WebDriverProvider {
@@ -27,6 +32,12 @@ public class WebDriverProvider {
             } else if (browser.equals("EDGE")) {
                 System.setProperty("webdriver.edge.driver", "src\\test\\resources\\drivers\\msedgedriver.exe");
                 driver = new EdgeDriver();
+
+            } else if (browser.equals("CHROME DOCKER")) {
+                driver = new RemoteWebDriver(new URL("http:localhost:4444/wd/hub"), new ChromeOptions());
+
+            } else if (browser.equals("FIREFOX DOCKER")) {
+                driver = new RemoteWebDriver(new URL("http:localhost:4444/wd/hub"), new FirefoxOptions());
             }
 
             driver.manage().window().maximize();
