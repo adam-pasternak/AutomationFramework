@@ -1,0 +1,12 @@
+@objects
+    BODY             xpath       //body
+    GOOGLE_LOGO      xpath       //img[@alt='Google']
+
+= Main section =
+    @on desktop
+        BODY:
+            width 1536px
+            height 710px
+
+        GOOGLE_LOGO:
+            inside BODY 118px top, 500px bottom, 632px left, 632px right
