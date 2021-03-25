@@ -16,7 +16,7 @@ public class BackgroundSteps {
 
     @After
     public void after(Scenario scenario) {
-        AppiumDriverProvider.getAndroidDriver().quit();
+        AndroidDriverProvider.getAndroidDriver().quit();
         Log.logInfo("App closed");
     }
 }

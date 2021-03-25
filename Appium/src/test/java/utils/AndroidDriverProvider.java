@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 
 import static utils.Tools.getProperty;
 
-public class AppiumDriverProvider {
+public class AndroidDriverProvider {
 
     static AndroidDriver driver;
     final static long IMPLICIT_WAIT = 3;

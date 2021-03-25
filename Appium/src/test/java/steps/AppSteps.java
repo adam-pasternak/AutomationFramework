@@ -3,7 +3,7 @@ package steps;
 import io.cucumber.java.en.Given;
 import utils.Log;
 
-import static utils.AppiumDriverProvider.createAndroidDriver;
+import static utils.AndroidDriverProvider.createAndroidDriver;
 
 
 public class AppSteps {
