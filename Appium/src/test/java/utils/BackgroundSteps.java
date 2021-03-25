@@ -5,7 +5,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 import static utils.PageObject.initializePageClasses;
-import static utils.AppiumDriverProvider.createAndroidDriver;
 
 
 public class BackgroundSteps {
@@ -13,8 +12,6 @@ public class BackgroundSteps {
     @Before
     public void before(Scenario scenario) throws Exception {
         initializePageClasses();
-        createAndroidDriver();
-        Log.logInfo("App opened");
     }
 
     @After
