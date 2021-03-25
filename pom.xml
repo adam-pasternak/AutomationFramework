@@ -12,6 +12,7 @@
     <modules>
         <module>Selenium</module>
         <module>Karate</module>
+        <module>Appium</module>
     </modules>
 
     <build>
