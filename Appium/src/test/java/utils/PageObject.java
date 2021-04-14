@@ -15,7 +15,7 @@ public class PageObject {
      */
     static Map<String, Map<String, By>> fullPageObjectsMap = new HashMap<>();
     static HashMap<String, By> pageObjectsMap = new HashMap<>();
-    static String pagesLocation = "pages";
+    static String pagesLocation = "screens";
 
     public static void initializePageClasses() {
         try {
@@ -31,7 +31,7 @@ public class PageObject {
             Log.logError("Encountered problem with page classes initialization");
             e.printStackTrace();
         }
-        Log.logInfo("Page classes initialized");
+        Log.logInfo("Screen classes initialized");
     }
 
     public void addPageObject(String pageName, String pageObjectName, By locator) {
