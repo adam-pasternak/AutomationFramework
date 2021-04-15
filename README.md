@@ -1,5 +1,5 @@
 ## Automation framework
-In this project I've created an framework for automation tests. It covers tests for Web browsers, Android devices and API calls.<br> I've decided to divide it on 3 sections which are described below:
+In this project I've created an framework for automation tests. It covers tests for Web browsers, Android devices and API calls. I've decided to divide it on 3 sections which are described below:
 
 ### Appium
 - module which is responsible for Android automation tests,
