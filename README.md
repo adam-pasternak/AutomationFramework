@@ -1,15 +1,18 @@
-# Appium
+## Automation framework
+In this project I've created an framework for automation tests. It covers tests for Web browsers, Android devices and API calls.<br> I've decided to divide it on 3 sections which are described below:
+
+### Appium
 - module which is responsible for Android automation tests,
 - used technologies: Java + Appium + Cucumber,
 - code is formatted with Page Object Pattern rules,
 - 3 example scenarios are implemented.
 
-# Karate
+### Karate
 - module which is responsible for API automation tests,
 - used technologies: Karate (uses automatically Gherkin syntax),
 - 2 example scenarios are implemented.
 
-# Selenium
+### Selenium
 - module which is responsible for Web automation tests.
 - used technologies: Java + Selenium + Cucumber. 
 - code is formatted with Page Object Pattern rules.
