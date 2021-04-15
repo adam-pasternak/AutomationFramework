@@ -16,7 +16,7 @@ import static utils.Tools.getProperty;
 public class AndroidDriverProvider {
 
     static AndroidDriver driver;
-    final static long IMPLICIT_WAIT = 3;
+    final static long IMPLICIT_WAIT = 5;
 
     public static AndroidDriver createAndroidDriver(String deviceName) {
 
