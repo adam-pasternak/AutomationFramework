@@ -13,6 +13,7 @@
         <module>Selenium</module>
         <module>Karate</module>
         <module>Appium</module>
+        <module>Selenium_PF</module>
     </modules>
 
     <build>
