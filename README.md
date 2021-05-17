@@ -19,3 +19,9 @@ In this project I've created an framework for automation tests. It covers tests 
 - there is availability to use Galen framework which is responsible to make layout check tests,
 - 12 example Selenium scenarios are implemented.
 - 1 example Galen scenario is implemented.
+
+### Selenium_PF
+- module which is responsible for Web automation tests.
+- used technologies: Java + Selenium + TestNG.
+- code is formatted with Page Object Model rules.
+- page factory is used.
