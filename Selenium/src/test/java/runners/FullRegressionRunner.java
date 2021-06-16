@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
         features = "src/test/features",
         glue = {"utils", "steps"},
         tags = "@Regression",
-        plugin = {"html:target/cukes", "json:target/cucumber-esphere-report.json",
-                "junit:target/cucumber-esphere-report.xml",
+        plugin = {"html:target/cukes", "json:target/report.json",
+                "junit:target/report.xml",
                 "pretty"}
 )
 public class FullRegressionRunner {}
