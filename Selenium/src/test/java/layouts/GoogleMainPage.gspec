@@ -5,8 +5,8 @@
 = Main section =
     @on desktop
         BODY:
-            width 1536px
-            height 710px
+            width 1360px
+            height 882px
 
         GOOGLE_LOGO:
-            inside BODY 118px top, 500px bottom, 632px left, 632px right
+            inside BODY 258px top, 532px bottom, 544px left, 544px right
