@@ -29,6 +29,17 @@
             </testResource>
         </testResources>
         <sourceDirectory>src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <inherited>true</inherited>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>resources\testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
     <dependencies>
