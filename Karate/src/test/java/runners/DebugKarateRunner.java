@@ -5,14 +5,15 @@ import com.intuit.karate.Runner;
 import net.masterthought.cucumber.Configuration;
 import net.masterthought.cucumber.ReportBuilder;
 import org.apache.commons.io.FileUtils;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class DebugKarateRunner {
 
@@ -20,7 +21,7 @@ public class DebugKarateRunner {
     public void APITests() {
         Results results = Runner.path("src/test/features").tags("@Debug").parallel(1);
         generateReport(results.getReportDir());
-        assertEquals(results.getErrorMessages(), 0, results.getFailCount());
+        assertEquals(0, results.getFailCount());
     }
 
     public static void generateReport(String karateOutputPath) {
